@@ -1,0 +1,44 @@
+.site-footer {
+  position: relative;
+  width: 100%;
+  color: white;
+  & a {
+    text-decoration: none;
+    color: white;
+    transition: 0.2s ;
+    &:hover {
+      color: #888;
+    }
+  }
+  & li {
+    list-style: none;
+    padding: 5px 0;
+  }
+  & h3 {
+    padding-bottom: 15px;
+  }
+  &__col-one {
+    flex-basis: 30%;
+    padding: 25px
+  }
+  &__col-two {
+    flex-basis: 30%;
+    padding: 25px;
+  }
+  &__col-three {
+    flex-basis: 30%;
+    padding: 25px;
+  }
+  &__col-one {
+    & h1 {
+      font-weight: 100;
+    }
+  }
+}
+
+.group-three {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background-color: black;
+}

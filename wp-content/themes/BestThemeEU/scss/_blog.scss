@@ -1,0 +1,139 @@
+.blog {
+  &__title {
+    margin: 10px;
+    text-align: center;
+    &-link {
+
+    }
+  }
+
+  &__image-container {
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    &>a {
+      background: linear-gradient(rgba(255, 165, 0, 0.5), rgba(255, 165, 0, 0.5));
+      overflow: hidden;
+      height: 150px;
+    }
+    & img {
+      &:hover {
+        transform: scale(1.15) rotate(-10deg);
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__content {
+    width: 50%;
+    margin: 15px auto;
+    line-height: 1.5em;
+    &-link {
+
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    &:hover {
+      color: rgb(75, 63, 63);
+    }
+  }
+  &__pagination {
+    text-align: center;
+  }
+}
+
+.article {
+  &__image-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    &>img {
+      max-width: 1200px;
+      max-height: 800px;
+      object-fit: contain;
+    }
+  }
+  &__description {
+    display: flex;
+    flex-wrap: wrap;
+    &-title {
+      flex-basis: 100%;
+      font-size: 40px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+
+    &-author {
+      flex-basis: 100%;
+      // padding-right: 10px;
+    }
+
+    &-time {
+      // padding-right: 10px;
+      flex-basis: 100%;
+    }
+
+    &-category {
+      flex-basis: 100%;
+      // padding-right: 10px;
+    }
+
+    &-tags {
+      
+    }
+  }
+
+  &__content {
+    margin: 30px 0;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    & a {
+      text-decoration: none;
+      color: inherit;
+      &:hover {
+        // color: yellow;
+      }
+    }
+
+    &-previous {
+      &>a {
+        margin-right: 10px;
+      }
+    }
+    &-next {
+      &>a {
+
+      }
+    }
+    &>span:has(a:hover) {
+      color: rgb(61, 58, 58);
+    }
+  }
+
+  &__comments {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+
+    &>h3 {
+      flex-basis: 100%;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    &>.commentlist {
+      flex-basis: 100%;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  }
+  // a:hover .article__links {
+
+  // }
+}
