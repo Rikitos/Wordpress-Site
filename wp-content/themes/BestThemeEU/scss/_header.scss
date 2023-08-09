@@ -1,33 +1,57 @@
 .site-header {
   &__container {
-    display: flex;
-    flex-basis: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
     justify-content: space-between;
     background-color: #666;
     border-bottom: 1px solid black;
-    margin-bottom: 25px;
-    &>h1 {
-      flex-basis: 30%;
-      padding: 20px;
+    &>i {
+      display: block;
+      position: fixed;
+      right: 30px;
+      top: 30px;
+      font-size: 2rem;
+      &:hover {
+        color: rgb(78, 71, 41);
+      }
     }
-    .container__menu-group {
-      flex-basis: 60%;
+    &>.off {
+      display: none;
+    }
+    &>h1 {
+      // flex-basis: 100%;
+      padding: 25px 0 25px 15px;
+      font-size: 1.8em;
+      &>a {
+        color: white;
+        &:hover {
+          color: black;
+        }
+      }
+    }
+    &-menu-group {
+      position: relative;
+      height: 0;
+      // top: -100vh;
+      bottom: 100vh;
+      transition: 0.5s;
+      &.menu-opened {
+        display: block;
+        // top: 0;
+        bottom: 0;
+        height: 100vh;
+      }
       & .main-navigation {
-        flex-basis: 50%;
+
         & ul {
-          display: flex;
-          justify-content: space-around;
           & li {
             list-style: none;
-            flex-basis: 30%;
-            padding: 20px 0;
-            justify-content: center;
+            padding: 20px 20px;
             & a {
-              display: block;
               text-decoration: none;
               color: white;
-              text-align: center;
-              margin: 0 auto;
               font-size: 20px;
               padding: 10px 0;
               border-bottom: 1px solid transparent;
@@ -41,8 +65,6 @@
       }
     }
     & a {
-      display: block;
-      width: 80%;
       text-decoration: none;
       color: white;
       transition: 0.2s ;
@@ -51,4 +73,100 @@
       }
     }
   }
+  @media (min-width: 680px) { 
+    &__container {
+      position: unset;
+      display: flex;
+      flex-basis: 100%;
+      justify-content: space-between;
+      background-color: #666;
+      border-bottom: 1px solid black;
+      &>i {
+        display: none;
+      }
+      &>h1 {
+        flex-basis: 35%;
+        padding: 15px 0 15px 15px;
+        line-height: 54px;
+      }
+
+      &-menu-group {
+        display: block;
+        flex-basis: 60%;
+        height: unset;
+        top: 0;
+        transition: none;
+        &.menu-opened {
+          height: unset;
+        }
+        & .main-navigation {
+          flex-basis: 50%;
+          & ul {
+            display: flex;
+            justify-content: space-around;
+            & li {
+              list-style: none;
+              flex-basis: 33%;
+              padding: 20px 0;
+              justify-content: center;
+              & a {
+                display: block;
+                text-decoration: none;
+                color: white;
+                text-align: center;
+                margin: 0 auto;
+                font-size: 20px;
+                padding: 10px 0;
+                border-bottom: 1px solid transparent;
+                &:hover {
+                  color: black;
+                  border-bottom: 1px solid black;
+                }
+              }
+            }
+          }
+        }
+      }
+      & a {
+        // display: block;
+        text-decoration: none;
+        color: white;
+        transition: 0.2s ;
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+.site-header__hamburger {
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  display: block;
+
+  >.open:nth-child(1) {
+    // background-color: red;
+    transform: translateY(12px);
+  }
+  >.open:nth-child(2) {
+    // background-color: yellow;
+    transform: rotate(90deg);
+  }
+  >.open:nth-child(3) {
+    // background-color: purple;
+    transform: translateY(-12px);
+  }
+  @media (min-width: 680px) { 
+    display: none;
+  }
+}
+
+.hamburger {
+  height: 6px;
+  width: 40px;
+  background-color: black;
+  margin-bottom: 6px;
+  transition: 0.2s linear;
 }

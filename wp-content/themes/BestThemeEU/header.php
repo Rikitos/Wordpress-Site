@@ -4,16 +4,21 @@
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php wp_head(); ?>
-  <title>Document</title>
-  <!-- <link rel="stylesheet" href="<?php echo get_theme_file_uri() ?> . /build/style.css"> -->
 </head>
 <body <?php body_class(); ?>>
   <header class="site-header">
     <div class="site-header__container">
-      <h1><a href="<?php echo site_url(); ?>">WordPress-site</a></h1>
-      <div class="container__menu-group">
+      <h1><a href="<?php echo site_url(); ?>"><?php echo get_bloginfo() ?></a></h1>
+      <div class="site-header__container-menu-group">
         <nav class="main-navigation">
-          <ul>
+          <?php
+          wp_nav_menu(
+            array(
+              'theme_location' => 'headerMainMenu',
+            )
+          );
+          ?>
+          <!-- <ul>
             <li>
               <a href="<?php echo site_url(); ?>">Strona Główna</a>
             </li>
@@ -23,9 +28,14 @@
             <li>
               <a href="<?php echo get_theme_file_uri('/blog') ?>">Blog</a>
             </li>
-          </ul>
+          </ul> -->
         </nav>
+
       </div>
+      <i class="fas fa-bars"></i>
+      <i class="fas fa-angle-up off"></i>
+      <!-- <p><?php dynamic_sidebar('sidebar-1'); ?> </p> -->
     </div>
+
   </header>
   <div class="main">

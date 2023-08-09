@@ -11,6 +11,7 @@
     }
   }
   & li {
+    margin: 5px 0;
     list-style: none;
     padding: 5px 0;
   }
@@ -18,16 +19,24 @@
     padding-bottom: 15px;
   }
   &__col-one {
-    flex-basis: 30%;
+    flex-basis: 40%;
     padding: 25px
   }
   &__col-two {
-    flex-basis: 30%;
     padding: 25px;
   }
   &__col-three {
-    flex-basis: 30%;
+    margin: 10px;
+    text-align: center;
+    & h2 {
+      margin: 10px 10px 10px 0;
+    }
+  }
+  &__col-four {
+    flex-wrap: wrap;
+    flex-basis: 100%;
     padding: 25px;
+    text-align: center;
   }
   &__col-one {
     & h1 {
@@ -36,9 +45,15 @@
   }
 }
 
-.group-three {
+.group-four {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
   background-color: black;
+  @media (min-width: 860px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: black;
+  }
 }

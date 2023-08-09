@@ -1,45 +1,28 @@
 </div>
   <foooter class="site-footer">
-    <div class="group-three">
+    <div class="group-four">
       <div class="site-footer__col-one">
         <h1><a href="<?php echo site_url() ?>"><strong>WordPress</strong> - Site</a></h1>
       </div>
 
       <div class="site-footer__col-two">
-        <h3>Explore</h3>
-        <nav>
-          <ul>
-            <li>
-              <a href="#">Generator</a>
-            </li>
-            <li>
-              <a href="#">Blog</a>
-            </li>
-            <li>
-              <a href="#">Placeholder</a>
-            </li>
-            <li>
-              <a href="#">Placeholder2</a>
-            </li>
-          </ul>
-        </nav>
+        Menu
+      <?php
+        wp_nav_menu(
+          array(
+            'theme_location' => 'footerMainMenu',
+            'menu' => 'Footer Main Menu',
+            'container' => 'nav',
+          )
+        );
+        ?>
       </div>
 
       <div class="site-footer__col-three">
-        <h3>Learn</h3>
-        <nav>
-          <ul>
-            <li>
-              <a href="#">Legal</a>
-            </li>
-            <li>
-              <a href="#">Privacy</a>
-            </li>
-            <li>
-              <a href="#">Careers</a>
-            </li>
-          </ul>
-        </nav>
+        <p><?php dynamic_sidebar('sidebar-1'); ?> </p>
+      </div>
+      <div class="site-footer__col-four">
+        Copyright &copy Riki 2023. All rights reserved
       </div>
     </div>
   </foooter>

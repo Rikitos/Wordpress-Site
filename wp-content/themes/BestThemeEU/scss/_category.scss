@@ -1,0 +1,45 @@
+.category {
+  &__header {
+    margin: 10px;
+    text-align: center;
+    &-title {
+      margin-bottom: 10px;
+    }
+    &-meta {
+
+    }
+  }
+  &__content {
+    margin: 15px 10px;
+    text-align: center;
+    &-title {
+      margin-bottom: 5px;
+      &>a {
+        text-decoration: none;
+        color: black;
+        &:hover {
+          color: #8f8f2d;
+        }
+      }
+    }
+    &-author {
+      &>a {
+        text-decoration: none;
+        color: rgb(69, 100, 69);
+        &:hover {
+          color: rgb(25, 70, 25);
+        }
+      }
+    }
+    &-excerpt {
+      margin: 15px 0 10px;
+    }
+    &-link {
+      color: rgb(71, 71, 71);
+      text-decoration: none;
+      &:hover {
+        color: #8f8f2d;
+      }
+    }
+  }
+}
