@@ -18,24 +18,15 @@
             )
           );
           ?>
-          <!-- <ul>
-            <li>
-              <a href="<?php echo site_url(); ?>">Strona Główna</a>
-            </li>
-            <li>
-              <a href="<?php echo get_theme_file_uri('/cat-generator') ?>">Generator</a>
-            </li>
-            <li>
-              <a href="<?php echo get_theme_file_uri('/blog') ?>">Blog</a>
-            </li>
-          </ul> -->
         </nav>
 
       </div>
       <i class="fas fa-bars"></i>
       <i class="fas fa-angle-up off"></i>
-      <!-- <p><?php dynamic_sidebar('sidebar-1'); ?> </p> -->
     </div>
-
+    
+    <div class="site-header__search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
   </header>
   <div class="main">
