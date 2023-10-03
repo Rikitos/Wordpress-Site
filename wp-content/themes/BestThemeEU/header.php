@@ -18,15 +18,16 @@
             )
           );
           ?>
+            <div class="site-header__container-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
         </nav>
-
       </div>
+
       <i class="fas fa-bars"></i>
       <i class="fas fa-angle-up off"></i>
     </div>
     
-    <div class="site-header__search">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </div>
+
   </header>
   <div class="main">

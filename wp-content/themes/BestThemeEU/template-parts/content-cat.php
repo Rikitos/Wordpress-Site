@@ -7,6 +7,6 @@
     <button class="Image-Generator__button-btn">Click</button>
   </div>
   <div>
-    <img class ="Image-Generator__img" src="<?php echo get_theme_file_uri('/images/cat1.jpg'); ?>" alt="" data-url="<?php echo get_theme_file_uri() . '/images';?>">
+    <img class ="Image-Generator__img show-img" src="<?php echo get_theme_file_uri('/images/cat1.jpg'); ?>" alt="" data-url="<?php echo get_theme_file_uri() . '/images';?>">
   </div>
 </section>

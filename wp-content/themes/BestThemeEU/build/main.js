@@ -9,7 +9,13 @@ class CatGenerator {
       this.imgURL = this.img.getAttribute('data-url');
       this.btn.addEventListener('click', () => {
         console.log('click');
-        this.randomizeImage();
+        this.img.classList.remove("show-img");
+        this.img.classList.add("fade-img");
+        setTimeout(function() {
+          this.randomizeImage();
+          this.img.classList.remove("fade-img");
+          this.img.classList.add("show-img");
+        }.bind(this), 500)
       })
     }
   }
@@ -32,7 +38,6 @@ class HeaderMenu {
     this.hamburgersContainer = document.querySelector('.site-header__hamburger');
 
     if (this.fasIcons.length > 0) {
-      console.log('wow1')
       this.fasIcons.forEach(icon => {
         icon.addEventListener('click', (e) => {
           this.fasIcons.forEach( e => {

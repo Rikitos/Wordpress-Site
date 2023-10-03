@@ -4,7 +4,6 @@
     font-size: 1.5rem;
     margin: 10px 0;
   }
-
   &__button {
     &-btn {
       font-size: 1rem;
@@ -21,8 +20,15 @@
       }
     }
   }
-
   &__img {
     width: 200px;
+    transition: 0.5s linear;
+    &.show-img {
+      opacity: 1;
+      transition: 0.5s linear;
+    }
+    &.fade-img {
+      opacity: 0;
+    }
   }
 }
